@@ -7,11 +7,12 @@ export interface VehicleConfig {
   rim: string;
   rim_color: string;
   rim_color_secondary: string;
-  rim_diameter: number;
+  rim_front_diameter: number;
+  rim_rear_diameter: number;
   rim_front_width: number;
   rim_rear_width: number;
   tire: string;
-  tire_diameter: number;
+  tire_aspectRatio: number;
   spare: boolean;
 }
 

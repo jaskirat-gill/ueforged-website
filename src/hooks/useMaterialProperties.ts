@@ -22,8 +22,8 @@ const setMaterials = (
   rimColorSecondary?: string
 ): void => {
   // Switch material name.
-  switch (true) {  
-    case material.name.startsWith('body'):
+  switch (true) {
+    case material.name.startsWith("body"):
       material.color?.setStyle(color);
       material.metalness = 0.4;
       material.roughness = roughness;
@@ -55,7 +55,7 @@ const setMaterials = (
       material.opacity = 0.8;
       material.color?.set(COLORS.DARK_GREY);
       break;
-    case material.name.startsWith('rubber'):
+    case material.name.startsWith("rubber"):
       material.metalness = 0.5;
       material.roughness = 0.9;
       (material as MeshStandardMaterial).flatShading = true;
@@ -66,8 +66,8 @@ const setMaterials = (
       material.roughness = 0.5;
       material.color?.set(COLORS.BLACK);
       break;
-      case material.name.startsWith("rim"):
-      case material.name === "rim_secondary":
+    case material.name.startsWith("rim"):
+    case material.name === "rim_secondary":
       // Switch rim color / secondary rim color.
       switch (
         material.name === "rim_secondary" ? rimColorSecondary : rimColor
